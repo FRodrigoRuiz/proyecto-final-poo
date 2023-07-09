@@ -1,0 +1,12 @@
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\bin\Debug\net7.0\BilleteraElectronica.deps.json
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\bin\Debug\net7.0\BilleteraElectronica.dll
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\bin\Debug\net7.0\BilleteraElectronica.pdb
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\BilleteraElectronica.csproj.AssemblyReference.cache
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\BilleteraElectronica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\BilleteraElectronica.AssemblyInfoInputs.cache
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\BilleteraElectronica.AssemblyInfo.cs
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\BilleteraElectronica.csproj.CoreCompileInputs.cache
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\BilleteraElectronica.dll
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\refint\BilleteraElectronica.dll
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\BilleteraElectronica.pdb
+C:\Users\farid\OneDrive\Escritorio\Final reinicio\ProyectoFinal\BilleteraElectronica\obj\Debug\net7.0\ref\BilleteraElectronica.dll
