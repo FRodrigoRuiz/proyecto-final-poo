@@ -8,8 +8,8 @@ class Program
 
         try
         {
-            Class1.Billetera.AgregarMoneda(new Class1.Crypto(1, Class1.Criptomoneda.Ethereum));
-            Class1.Billetera.AgregarMoneda(new Class1.Crypto(2, Class1.Criptomoneda.Bitcoin));
+            Class1.Billetera.AgregarMoneda(new Class1.Crypto(1, Class1.Crypto.Criptomoneda.Ethereum));
+            Class1.Billetera.AgregarMoneda(new Class1.Crypto(2, Class1.Crypto.Criptomoneda.Bitcoin));
             Class1.Billetera.AgregarMoneda(new Class1.Dolares(100));
 
             Console.WriteLine(Class1.Billetera.MostrarMonedas(precioDolarOficial));

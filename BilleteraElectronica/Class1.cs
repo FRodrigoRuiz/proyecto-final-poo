@@ -11,16 +11,19 @@ public class Class1
             Cantidad = cantidad;
         }
 
-        public virtual double ValorEnDolares()
-        {
-            return Cantidad;
-        }
+        public abstract double ValorEnDolares { get; }
 
         public abstract string MostrarMoneda(double precioDolar);
     }
 
     public class Crypto : Moneda
     {
+        public enum Criptomoneda
+        {
+            Ethereum,
+            Bitcoin
+        }
+
         private Criptomoneda tipo;
 
         public Crypto(double cantidad, Criptomoneda tipo) : base(cantidad)
@@ -28,23 +31,25 @@ public class Class1
             this.tipo = tipo;
         }
 
-        public override double ValorEnDolares()
+        public override double ValorEnDolares
         {
-            if (tipo == Criptomoneda.Ethereum)
+            get 
             {
-                return Cantidad * 1200;
+                if (tipo == Criptomoneda.Ethereum)
+                {
+                    return Cantidad * 1200;
+                }
+                else if (tipo == Criptomoneda.Bitcoin)
+                {
+                    return Cantidad * 17000;
+                }
+                return 0;
             }
-            else if (tipo == Criptomoneda.Bitcoin)
-            {
-                return Cantidad * 17000;
-            }
-
-            return 0;
         }
 
         public override string MostrarMoneda(double precioDolar)
         {
-            double valorEnDolares = ValorEnDolares();
+            double valorEnDolares = ValorEnDolares;
             double valorEnPesos = valorEnDolares * precioDolar;
             string valoresMsj = $"{tipo.ToString()} - Valor en dólares: {valorEnDolares}, Precio en pesos: {valorEnPesos}";
 
@@ -52,21 +57,20 @@ public class Class1
         }
     }
 
-    public enum Criptomoneda
-    {
-        Ethereum,
-        Bitcoin
-    }
-
     public class Dolares : Moneda 
     {
+        public Dolares(double cantidad) : base(cantidad)
+        {
+        }
+        
+        public override double ValorEnDolares
+        {
+            get { return Cantidad; }
+        }
+        
         private double PrecioEnPesos(double precioDolar)
         {
             return Cantidad * precioDolar * 1.30; // Aplica el 30% de impuesto país
-        }
-
-        public Dolares(double cantidad) : base(cantidad)
-        {
         }
 
         public override string MostrarMoneda(double precioDolar)
@@ -84,11 +88,6 @@ public class Class1
 
         public static void AgregarMoneda(Moneda moneda)
         {
-            // if (moneda.ValorEnDolares() + ObtenerTotalDolares() > 200)
-            // {
-            //     throw new Exception("No puede comprar más de 200 dólares");
-            // }
-
             if (moneda is Dolares dolares)
             {
                 if (dolares.Cantidad > 200)
@@ -96,18 +95,6 @@ public class Class1
             }
 
             monedas.Add(moneda);
-        }
-
-        public static double ObtenerTotalDolares() //Eliminar luego
-        {
-            double totalDolares = 0;
-
-            foreach (Moneda moneda in monedas)
-            {
-                totalDolares += moneda.ValorEnDolares();
-            }
-
-            return totalDolares;
         }
 
         public static string MostrarMonedas(double precioDolar)
